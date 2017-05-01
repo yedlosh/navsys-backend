@@ -4,7 +4,7 @@
   "description": "REST Backend server for IIM LED Navigation system",
   "main": "lib/server.js",
   "scripts": {
-    "start": "nodemon lib/server.js --exec babel-node",
+    "start": "nodemon --ignore db/ lib/server.js --exec babel-node",
     "prebuild": "rimraf dist/",
     "build": "babel lib -d dist",
     "serve": "node dist/server.js"
@@ -22,7 +22,8 @@
     "dotenv": "^2.0.0",
     "express": "^4.15.2",
     "lodash": "^4.17.4",
-    "node-dijkstra": "^2.4.1"
+    "node-dijkstra": "^2.4.1",
+    "trivialdb": "^2.3.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
