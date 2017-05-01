@@ -16,3 +16,6 @@ npm-debug*
 
 # System local files
 .DS_Store
+
+# DB files
+/db/
