@@ -4,7 +4,7 @@
   "description": "REST Backend server for IIM LED Navigation system",
   "main": "lib/server.js",
   "scripts": {
-    "start": "nodemon lib/server.js --exec babel-node",
+    "start": "nodemon --ignore db/ lib/server.js --exec babel-node",
     "prebuild": "rimraf dist/",
     "build": "babel lib -d dist",
     "serve": "node dist/server.js"
@@ -17,13 +17,20 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/yedlosh/navsys-backend#readme",
   "dependencies": {
+    "axios": "^0.16.1",
+    "body-parser": "^1.17.1",
     "dotenv": "^2.0.0",
-    "express": "^4.15.2"
+    "express": "^4.15.2",
+    "lodash": "^4.17.4",
+    "node-dijkstra": "^2.4.1",
+    "trivialdb": "^2.3.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
+    "babel-polyfill": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.24.1",
     "nodemon": "^1.11.0",
     "rimraf": "^2.5.4"
   }
