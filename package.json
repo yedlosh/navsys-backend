@@ -20,6 +20,7 @@
     "axios": "^0.16.1",
     "body-parser": "^1.17.1",
     "dotenv": "^2.0.0",
+    "dotenv-safe": "^4.0.4",
     "express": "^4.15.2",
     "lodash": "^4.17.4",
     "node-dijkstra": "^2.4.1",
