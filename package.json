@@ -18,7 +18,9 @@
   "homepage": "https://bitbucket.org/yedlosh/navsys-backend#readme",
   "dependencies": {
     "axios": "^0.16.1",
+    "babel-polyfill": "^6.23.0",
     "body-parser": "^1.17.1",
+    "cors": "^2.8.3",
     "dotenv-safe": "^4.0.4",
     "express": "^4.15.2",
     "lodash": "^4.17.4",
@@ -27,7 +29,6 @@
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
-    "babel-polyfill": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "babel-register": "^6.24.1",
