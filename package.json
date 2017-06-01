@@ -1,6 +1,6 @@
 {
   "name": "navsys-backend",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "REST Backend server for IIM LED Navigation system",
   "main": "lib/server.js",
   "scripts": {
