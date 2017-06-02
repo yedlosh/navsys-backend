@@ -20,7 +20,7 @@ $ npm install
 
 The server depends on a FIND server for location identification. It could be run locally, or the 
 [public cloud instance](https://ml.internalpositioning.com/) can be used as well. 
-Please refer to its [repository](https://github.com/schollz/find) for details on FIND.
+Please refer to its [FIND repository](https://github.com/schollz/find) for details.
 
 ### Configuration ###
 
@@ -31,7 +31,7 @@ It structure should be as follows:
 HOST=0.0.0.0
 #Port - Defaults to 3000
 PORT=3000 
-#Address of FIND service URL - REQUIRED
+#Address of FIND service - REQUIRED
 FIND_SERVER_URL=https://ml.internalpositioning.com
 #Group which should be used for FIND service - REQUIRED
 FIND_SERVER_GROUP=groupname
@@ -41,5 +41,5 @@ MAC_FILTERING=false
 
 ## Acknowledgements ##
 
-Thanks to [schollz](https://github.com/schollz/) for creating [FIND](https://github.com/schollz/find) which is this 
-server using for location calculations.
+Thanks to [schollz](https://github.com/schollz/) for creating [FIND](https://github.com/schollz/find), which is being 
+used for location calculations.
