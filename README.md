@@ -1,29 +1,45 @@
-# IIM LED Navigation System #
+# navsys - Backend server #
 
-This README would normally document whatever steps are necessary to get your application up and running. But whatev
+**navsys** is a thesis project, which aims to provide an indoor navigation solution with audiovisual feedback, 
+using a combination of smartphone based WiFi positioning and physical navigation units. 
+For a documentation of the whole project see [navsys-docs](https://github.com/yedlosh/navsys-docs) repository.
 
-### What is this repository for? ###
+## Backend server
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+The backend server is responsible for collecting the user's location, calculating the optimal path, 
+activating navigator units etc. It's built using Express for it's REST API.
 
-### How do I get set up? ###
+### Installation ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+The server is set up as an npm package. Simply install all dependencies with
+```bash
+$ npm install
+```
 
-### Contribution guidelines ###
+### Dependencies ###
 
-* Writing tests
-* Code review
-* Other guidelines
+The server depends on a FIND server for location identification. It could be run locally, or the 
+[public cloud instance](https://ml.internalpositioning.com/) can be used as well. 
+Please refer to its [repository](https://github.com/schollz/find) for details on FIND.
 
-### Who do I talk to? ###
+### Configuration ###
 
-* Repo owner or admin
-* Other community or team contact
+Configuration should be provided using .env file.
+It structure should be as follows:
+```
+#The hosting address - Defaults to 0.0.0.0 
+HOST=0.0.0.0
+#Port - Defaults to 3000
+PORT=3000 
+#Address of FIND service URL - REQUIRED
+FIND_SERVER_URL=https://ml.internalpositioning.com
+#Group which should be used for FIND service - REQUIRED
+FIND_SERVER_GROUP=groupname
+#Decides if all APs or only Navigator APs should be used for fingerprinting and localization - REQUIRED
+MAC_FILTERING=false
+```
+
+## Acknowledgements ##
+
+Thanks to [schollz](https://github.com/schollz/) for creating [FIND](https://github.com/schollz/find) which is this 
+server using for location calculations.
