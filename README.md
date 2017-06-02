@@ -24,8 +24,8 @@ Please refer to [FIND repository](https://github.com/schollz/find) for details.
 
 ### Configuration
 
-Configuration should be provided using .env file.
-It structure should be as follows:
+Configuration should be provided using [.env](https://github.com/motdotla/dotenv) file.
+It's structure should be as follows:
 ```
 #The hosting address - Defaults to 0.0.0.0 
 HOST=0.0.0.0
